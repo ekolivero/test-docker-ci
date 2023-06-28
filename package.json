@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsup src/index.ts --format esm --minify --clean --sourcemap --legacy-output --target node16 --out-dir dist"
+    "build": "tsup src/index.ts --format esm --minify --clean --sourcemap --legacy-output --target node16 --out-dir dist",
+    "start": "npm run build && node dist/esm/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "express": "^4.18.2",
     "tsup": "^7.1.0",
     "typescript": "^5.1.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.35.1"
   }
 }
