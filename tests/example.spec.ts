@@ -7,5 +7,5 @@ test('has correct div value', async ({ page }) => {
   
   const div = await page.$('div');
   const text = await div?.innerText();
-  expect(text).toBe('Hello world');
+  expect(text).toBe('Hello me');
 });
